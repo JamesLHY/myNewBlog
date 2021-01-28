@@ -1,6 +1,6 @@
 
 module.exports = {
-   dev:{
-      assetsPublicPath:'/'
-   }
+   publicPath: process.env.NODE_ENV === 'production'
+       ? '/myBlog.io/'
+       : '/',
 };
