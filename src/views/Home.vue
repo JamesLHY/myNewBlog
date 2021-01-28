@@ -63,6 +63,7 @@
     }
 
     .content-wrapper {
+        background-size: cover;
         position: relative;
         flex: 1;
         opacity:1.5;
@@ -77,6 +78,7 @@
         padding: 46px;
         display: flex;
         justify-content: space-between;
+        min-width: 90vw;
     }
 
     .icon {

@@ -1,12 +1,19 @@
 <template>
     <div>
-        <button>Get Started</button>
+
+            <button v-on:click="getStarted">Get Started</button>
+
     </div>
 </template>
 
 <script lang="ts">
     export default {
-        name: "Logo"
+        name: "Logo",
+        methods:{
+            getStarted(){
+                this.$router.push('/Blog')
+            }
+        }
     }
 </script>
 

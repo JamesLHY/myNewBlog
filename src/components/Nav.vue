@@ -7,10 +7,10 @@
     <use xlink:href="#icon-lol"></use>
 </svg>
                     </span>
-                <a href="">home</a>
-                <a href="">blog</a>
-                <a href="">work</a>
-                <a href="">about</a>
+                <router-link to="/Home">Home</router-link>
+                <router-link to="/Blog">Blog</router-link>
+                <router-link to="/Home">Work</router-link>
+                <router-link to="/Home">About</router-link>
             </div>
             <div class="right">
                 <span class="icon-github">
@@ -52,6 +52,7 @@
                     padding: 0 10px;
                     text-transform: uppercase;
                     transition: 0.5s;
+
                     &::after {
                         position: absolute;
                         content: "";
@@ -64,18 +65,21 @@
                         transform-origin: right;
                         transition: transform 0.5s;
                     }
+
                     &:hover {
                         color: #95a5a6;
                     }
+
                     &:hover::after {
                         transform: scaleX(1);
                         transform-origin: left;
                     }
                 }
             }
-            > .right{
 
-                > span{
+            > .right {
+
+                > span {
                     padding: 0 10px;
                 }
 
