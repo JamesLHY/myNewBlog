@@ -4,8 +4,8 @@
             <div class="left">
                     <span>
                         <svg class="icon" aria-hidden="true">
-    <use xlink:href="#icon-lol"></use>
-</svg>
+                            <use xlink:href="#icon-lol"></use>
+                        </svg>
                     </span>
                 <router-link to="/Home">Home</router-link>
                 <router-link to="/Blog">Blog</router-link>
@@ -13,12 +13,15 @@
                 <router-link to="/Home">About</router-link>
             </div>
             <div class="right">
-                <span class="icon-github">
+                <a href="https://github.com/JamesLHY/">
+                    <span class="icon-github">
                      <svg class="icon" aria-hidden="true">
-    <use xlink:href="#icon-github"></use>
-</svg>
+                         <use xlink:href="#icon-github"></use>
+                     </svg>
                 </span>
-                <span>16:00</span>
+                </a>
+
+                <span>{{this.currentDate}}</span>
             </div>
         </div>
 
@@ -27,7 +30,31 @@
 
 <script lang="ts">
     export default {
-        name: "Nav"
+        name: "Nav",
+        data() {
+            return {
+                currentDate: ''
+            }
+
+        },
+        created() {
+           this.getTime()
+        },
+        methods: {
+
+            getTime() {
+                setInterval(() => {
+                    const date = new Date();
+                    const h = (date.getHours() < 10 ? '0' + date.getHours() : date.getHours()) + ':';
+                    const m = (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()) + ':';
+                    const s = (date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds());
+                    this.currentDate = h + m + s
+                }, 1000)
+            }
+
+        }
+
+
     }
 </script>
 
@@ -46,6 +73,15 @@
             border-bottom: 1px solid #333333;
 
             > .left {
+                > span {
+                    > svg {
+                        transform: translateY(-2px);
+
+                        &:hover {
+                            transform: scale(1.5);
+                        }
+                    }
+                }
 
                 > a {
                     position: relative;
@@ -78,10 +114,16 @@
             }
 
             > .right {
+                > a {
+                    > span {
+                        padding: 0 10px;
 
-                > span {
-                    padding: 0 10px;
+                        > svg {
+                            transform: translateY(-2px);
+                        }
+                    }
                 }
+
 
             }
         }
