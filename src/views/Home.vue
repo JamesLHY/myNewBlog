@@ -56,8 +56,6 @@
 
 <style lang="scss" scoped>
     .container {
-
-        min-height: 100vh;
         display: flex;
         flex-direction: column;
     }

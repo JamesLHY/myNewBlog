@@ -50,7 +50,7 @@
 <style lang="scss">
     .container {
         background: #474747;
-        min-height: 100vh;
+
 
         > .content-wrapper {
             position: relative;

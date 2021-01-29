@@ -9,7 +9,7 @@
                     </span>
                 <router-link to="/Home">Home</router-link>
                 <router-link to="/Blog">Blog</router-link>
-                <router-link to="/Home">Work</router-link>
+                <router-link to="/Work">Work</router-link>
                 <router-link to="/Home">About</router-link>
             </div>
             <div class="right">

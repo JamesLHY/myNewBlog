@@ -27,8 +27,6 @@
 </script>
 
 <style scoped lang="scss">
-
-
     body {
         display: flex;
         justify-content: center;
@@ -37,12 +35,10 @@
 
     }
 
-
     h1 {
         margin: 0;
         letter-spacing: -2px;
     }
-
 
     @keyframes fade-in {
         to {
