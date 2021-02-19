@@ -176,6 +176,7 @@
     }
 
     .container {
+        background: #474747;
         .icon {
             width: 3em;
             height: 3em;

@@ -10,7 +10,7 @@
                 <router-link to="/Home">Home</router-link>
                 <router-link to="/Blog">Blog</router-link>
                 <router-link to="/Work">Work</router-link>
-                <router-link to="/Home">About</router-link>
+                <router-link to="/About">About</router-link>
             </div>
             <div class="right">
                 <a href="https://github.com/JamesLHY/">
@@ -51,10 +51,7 @@
                     this.currentDate = h + m + s
                 }, 1000)
             }
-
         }
-
-
     }
 </script>
 

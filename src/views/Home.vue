@@ -3,6 +3,11 @@
         <Nav/>
 
         <div class="content-wrapper">
+            <video class="bg-video" muted autoplay loop preload="auto">
+                <source src="http://weapi.zo-ko.com/views/comm/assets/bg-lol.mp4"
+                        type="video/mp4">
+            </video>
+
             <div class="content">
                 <Title/>
                 <div class="icon-line">
@@ -55,24 +60,24 @@
 </script>
 
 <style lang="scss" scoped>
+    .bg-video{
+        position: fixed;
+    }
+    .icon-line{
+        z-index: 10;
+    }
     .container {
         display: flex;
         flex-direction: column;
     }
 
     .content-wrapper {
-        background-size: cover;
         position: relative;
-        flex: 1;
-        opacity:1.5;
-        background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.6)), url('../assets/lol.gif');
-        display: flex;
-        flex-direction: column;
-
-
+        min-height: 94vh;
     }
 
     .content {
+
         padding: 46px;
         display: flex;
         justify-content: space-between;
@@ -98,13 +103,13 @@
             margin-top: 4px;
         }
     }
-    .logo-container{
+
+    .logo-container {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        bottom: 10vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        bottom: 6vh;
+
+
     }
 </style>

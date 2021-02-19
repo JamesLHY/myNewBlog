@@ -26,7 +26,7 @@
             </div>
             <div class="right">
                 <div class="header">标题1</div>
-                <div class="content">内容1</div>
+                <div class="content-wrapper">内容1</div>
             </div>
         </div>
 
@@ -47,7 +47,7 @@
     }
 
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
     .container {
         background: #474747;
 
@@ -124,7 +124,7 @@
                     font-weight: bold;
                 }
 
-                > .content {
+                > .content-wrapper {
                     width: 80%;
                     max-width: 760px;
                     margin: 0 auto;
